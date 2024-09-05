@@ -1,29 +1,60 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import {
-  GetKpisResponse,
-  GetProductsResponse,
-  GetTransactionsResponse,
+  GetUserProfileResponse,
+  GetSavingsResponse,
+  GetLiabilitiesResponse,
+  GetInvestmentsResponse,
+  GetIncomeResponse,
+  GetExpensesResponse,
+  GetBudgetResponse,
 } from "./types";
 
-export const api = createApi({
+// API instance with axios
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL: import.meta.env.VITE_BASE_URL,
+});
+
+// Auth functions using axios
+export const register = (data: { email: string; password: string }) => api.post('/auth/register', data);
+export const login = (data: { email: string; password: string }) => api.post('/auth/login', data);
+
+// RTK Query API definition
+export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_BASE_URL }),
-  reducerPath: "main",
-  tagTypes: ["Kpis", "Products", "Transactions"],
+  reducerPath: "api",
+  tagTypes: ["UserProfile", "Savings", "Liabilities", "Investments", "Income", "Expenses", "Budget"],
   endpoints: (build) => ({
-    getKpis: build.query<Array<GetKpisResponse>, void>({
-      query: () => "kpi/kpis/",
-      providesTags: ["Kpis"],
+    getUserProfile: build.query<GetUserProfileResponse, void>({
+      query: () => "user/profile/",
+      providesTags: ["UserProfile"],
     }),
-    getProducts: build.query<Array<GetProductsResponse>, void>({
-      query: () => "product/products/",
-      providesTags: ["Products"],
+    getSavings: build.query<Array<GetSavingsResponse>, void>({
+      query: () => "savings/",
+      providesTags: ["Savings"],
     }),
-    getTransactions: build.query<Array<GetTransactionsResponse>, void>({
-      query: () => "transaction/transactions/",
-      providesTags: ["Transactions"],
+    getLiabilities: build.query<Array<GetLiabilitiesResponse>, void>({
+      query: () => "liabilities/",
+      providesTags: ["Liabilities"],
+    }),
+    getInvestments: build.query<Array<GetInvestmentsResponse>, void>({
+      query: () => "investments/",
+      providesTags: ["Investments"],
+    }),
+    getIncome: build.query<Array<GetIncomeResponse>, void>({
+      query: () => "income/",
+      providesTags: ["Income"],
+    }),
+    getExpenses: build.query<Array<GetExpensesResponse>, void>({
+      query: () => "expenses/",
+      providesTags: ["Expenses"],
+    }),
+    getBudget: build.query<Array<GetBudgetResponse>, void>({
+      query: () => "budget/",
+      providesTags: ["Budget"],
     }),
   }),
 });
 
-export const { useGetKpisQuery, useGetProductsQuery, useGetTransactionsQuery } =
-  api;
+export default apiSlice;

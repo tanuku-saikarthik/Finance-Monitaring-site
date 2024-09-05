@@ -5,5 +5,5 @@ body,
 {
   height:100%;
   width: 100%;
-  background-color: #1f2026;
+  background-color: linear-gradient(to right, #8e44ad, #3498db);
 }

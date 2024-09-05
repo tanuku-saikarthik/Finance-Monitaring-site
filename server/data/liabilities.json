@@ -1,0 +1,14 @@
+[
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0a",
+        "type": "Credit Card Debt",
+        "amount": 1000,
+        "date": "2024-07-28"
+    },
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0b",
+        "type": "Student Loan",
+        "amount": 8000,
+        "date": "2024-07-29"
+    }
+]

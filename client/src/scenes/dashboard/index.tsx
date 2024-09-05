@@ -1,51 +1,36 @@
 import { Box, useMediaQuery } from "@mui/material";
-import Row1 from "./row1";
-import Row2 from "./row2";
-import Row3 from "./row3";
+import IncomeExpenseAnalysis from "./IncomeExpenseAnalysis";
+import CategorySpendingAnalysis from "./CategorySpendingAnalysis";
+import SavingsRateAnalysis from "./SavingsRateAnalysis";
+import DebtToIncomeRatio from "./DebtToIncomeRatio";
+import NetWorthTrend from "./NetWorthTrend";
+import CashFlowAnalysis from "./CashFlowAnalysis";
+import BudgetVsActual from "./BudgetVsActual";
+import InvestmentPerformance from "./InvestmentPerformance";
+import EmergencyFundStatus from "./EmergencyFundStatus";
+import DashboardBox from "../../components/DashboardBox";
 
 const gridTemplateLargeScreens = `
-  "a b c"
-  "a b c"
-  "a b c"
-  "a b f"
-  "d e f"
-  "d e f"
-  "d h i"
-  "g h i"
-  "g h j"
-  "g h j"
+  "incomeExpense incomeExpense categorySpending"
+  "incomeExpense incomeExpense categorySpending"
+   "incomeExpense incomeExpense categorySpending"
+  "savingsRate debtToIncome netWorth"
+  "savingsRate debtToIncome netWorth"
+  "cashFlow budgetVsActual investmentPerformance"
+  "cashFlow budgetVsActual investmentPerformance"
 `;
+
 const gridTemplateSmallScreens = `
-  "a"
-  "a"
-  "a"
-  "a"
-  "b"
-  "b"
-  "b"
-  "b"
-  "c"
-  "c"
-  "c"
-  "d"
-  "d"
-  "d"
-  "e"
-  "e"
-  "f"
-  "f"
-  "f"
-  "g"
-  "g"
-  "g"
-  "h"
-  "h"
-  "h"
-  "h"
-  "i"
-  "i"
-  "j"
-  "j"
+  "incomeExpense"
+  "incomeExpense"
+  "categorySpending"
+  "categorySpending"
+  "savingsRate"
+  "debtToIncome"
+  "netWorth"
+  "cashFlow"
+  "budgetVsActual"
+  "investmentPerformance"
 `;
 
 const Dashboard = () => {
@@ -60,7 +45,7 @@ const Dashboard = () => {
         isAboveMediumScreens
           ? {
               gridTemplateColumns: "repeat(3, minmax(370px, 1fr))",
-              gridTemplateRows: "repeat(10, minmax(60px, 1fr))",
+              gridTemplateRows: "repeat(7, minmax(60px, 1fr))",
               gridTemplateAreas: gridTemplateLargeScreens,
             }
           : {
@@ -70,9 +55,38 @@ const Dashboard = () => {
             }
       }
     >
-      <Row1 />
-      <Row2 />
-      <Row3 />
+      
+        <DashboardBox gridArea= "incomeExpense" >
+        <IncomeExpenseAnalysis />
+        </DashboardBox>
+   
+      <DashboardBox gridArea= "categorySpending" >
+        <CategorySpendingAnalysis />
+        </DashboardBox>
+    
+      <DashboardBox gridArea= "savingsRate" >
+        <SavingsRateAnalysis />
+        </DashboardBox>
+ 
+      <DashboardBox gridArea= "debtToIncome" >
+        <DebtToIncomeRatio />
+        </DashboardBox>
+      <DashboardBox gridArea= "netWorth" >
+        <NetWorthTrend />
+        </DashboardBox>
+      <DashboardBox gridArea= "cashFlow" >
+        <CashFlowAnalysis />
+        </DashboardBox>
+      <DashboardBox gridArea= "budgetVsActual" >
+        <BudgetVsActual />
+        </DashboardBox>
+      <DashboardBox gridArea= "investmentPerformance" >
+        <InvestmentPerformance />
+        </DashboardBox>
+  {  /*  <DashboardBox gridArea= "emergencyFund" >
+        <EmergencyFundStatus />
+        </DashboardBox>*/}
+      
     </Box>
   );
 };

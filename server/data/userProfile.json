@@ -1,0 +1,16 @@
+[
+    {
+        "name": "John Doe",
+        "age": 30,
+        "occupation": "Engineer",
+        "annual_income": 70000,
+        "financial_goals": "Buy a house"
+    },
+    {
+        "name": "Jane Doe",
+        "age": 28,
+        "occupation": "Teacher",
+        "annual_income": 50000,
+        "financial_goals": "Save for retirement"
+    }
+]

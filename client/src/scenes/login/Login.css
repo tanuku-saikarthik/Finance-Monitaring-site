@@ -1,0 +1,101 @@
+/* Background Gradient */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #8e44ad, #3498db);
+    padding: 20px;
+  }
+  
+  /* Login Box */
+  .login-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+  
+  /* Title */
+  .login-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus {
+    border-color: #666;
+  }
+  
+  /* Forgot Password */
+  .form-forgot {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  .forgot-password {
+    font-size: 14px;
+    color: #777;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  /* Login Button */
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+  }
+  
+  /* Signup Link */
+  .signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .signup {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .signup:hover {
+    text-decoration: underline;
+  }
+  

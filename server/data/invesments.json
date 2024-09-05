@@ -1,0 +1,14 @@
+[
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0a",
+        "type": "Stocks",
+        "amount": 2000,
+        "date": "2024-07-18"
+    },
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0b",
+        "type": "Mutual Funds",
+        "amount": 1500,
+        "date": "2024-07-20"
+    }
+]

@@ -1,57 +1,122 @@
+// ExpensesByCategory Interface
 export interface ExpensesByCategory {
-    salaries: number;
-    supplies: number;
-    services: number;
-  }
-  
-  export interface Month {
-    id: string;
-    month: string;
-    revenue: number;
-    expenses: number;
-    nonOperationalExpenses: number;
-    operationalExpenses: number;
-  }
-  
-  export interface Day {
-    id: string;
-    date: string;
-    revenue: number;
-    expenses: number;
-  }
-  
-  export interface GetKpisResponse {
-    id: string;
-    _id: string;
-    __v: number;
-    totalProfit: number;
-    totalRevenue: number;
-    totalExpenses: number;
-    expensesByCategory: ExpensesByCategory;
-    monthlyData: Array<Month>;
-    dailyData: Array<Day>;
-    createdAt: string;
-    updatedAt: string;
-  }
-  
-  export interface GetProductsResponse {
-    id: string;
-    _id: string;
-    __v: number;
-    price: number;
-    expense: number;
-    transactions: Array<string>;
-    createdAt: string;
-    updatedAt: string;
-  }
-  
-  export interface GetTransactionsResponse {
-    id: string;
-    _id: string;
-    __v: number;
-    buyer: string;
-    amount: number;
-    productIds: Array<string>;
-    createdAt: string;
-    updatedAt: string;
-  }
+  housing: number;
+  food: number;
+  transportation: number;
+  utilities: number;
+  insurance: number;
+  healthcare: number;
+  savings: number;
+  entertainment: number;
+  miscellaneous: number;
+}
+
+// MonthlyData Interface
+export interface MonthlyData {
+  id: string;
+  month: string;
+  income: number;
+  expenses: number;
+  savings: number;
+  investments: number;
+  liabilities: number;
+}
+
+// DailyData Interface
+export interface DailyData {
+  id: string;
+  date: string;
+  income: number;
+  expenses: number;
+}
+
+// GetUserProfileResponse Interface
+export interface GetUserProfileResponse {
+  id: string;
+  _id: string;
+  __v: number;
+  name: string;
+  age: number;
+  occupation: string;
+  annual_income: number;
+  financial_goals: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// GetSavingsResponse Interface
+export interface GetSavingsResponse {
+  id: string;
+  _id: string;
+  __v: number;
+  user: string; // ObjectId referring to the User
+  amount: number;
+  date: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// GetLiabilitiesResponse Interface
+export interface GetLiabilitiesResponse {
+  id: string;
+  _id: string;
+  __v: number;
+  user: string; // ObjectId referring to the User
+  type: string;
+  amount: number;
+  date: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// GetInvestmentsResponse Interface
+export interface GetInvestmentsResponse {
+  id: string;
+  _id: string;
+  __v: number;
+  user: string; // ObjectId referring to the User
+  type: string;
+  amount: number;
+  date: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// GetIncomeResponse Interface
+export interface GetIncomeResponse {
+  id: string;
+  _id: string;
+  __v: number;
+  user: string; // ObjectId referring to the User
+  source: string;
+  amount: number;
+  date: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// GetExpensesResponse Interface
+export interface GetExpensesResponse {
+  id: string;
+  _id: string;
+  __v: number;
+  user: string; // ObjectId referring to the User
+  category: string;
+  amount: number;
+  date: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// GetBudgetResponse Interface
+export interface GetBudgetResponse {
+  id: string;
+  _id: string;
+  __v: number;
+  user: string; // ObjectId referring to the User
+  category: string;
+  allocated_amount: number;
+  spent_amount: number;
+  createdAt: string;
+  updatedAt: string;
+}

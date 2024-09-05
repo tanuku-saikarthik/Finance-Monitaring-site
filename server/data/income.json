@@ -1,0 +1,26 @@
+[
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0a",
+        "source": "Salary",
+        "amount": 5800,
+        "date": "2024-07-01"
+    },
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0a",
+        "source": "Freelancing",
+        "amount": 1200,
+        "date": "2024-07-15"
+    },
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0b",
+        "source": "Salary",
+        "amount": 4000,
+        "date": "2024-07-01"
+    },
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0b",
+        "source": "Tutoring",
+        "amount": 500,
+        "date": "2024-07-20"
+    }
+]

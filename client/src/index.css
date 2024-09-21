@@ -1,0 +1,9 @@
+html,
+body,
+#root 
+, .app
+{
+  height:100%;
+  width: 100%;
+  background-color: linear-gradient(to right, #8e44ad, #3498db);
+}

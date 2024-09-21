@@ -1,0 +1,32 @@
+[
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0a",
+        "category": "Housing",
+        "amount": 1500,
+        "date": "2024-07-05"
+    },
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0a",
+        "category": "Transportation",
+        "amount": 200,
+        "date": "2024-07-10"
+    },
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0a",
+        "category": "Groceries",
+        "amount": 300,
+        "date": "2024-07-12"
+    },
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0b",
+        "category": "Utilities",
+        "amount": 150,
+        "date": "2024-07-06"
+    },
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0b",
+        "category": "Entertainment",
+        "amount": 100,
+        "date": "2024-07-14"
+    }
+]

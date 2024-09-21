@@ -1,0 +1,26 @@
+[
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0a",
+        "category": "Housing",
+        "allocated_amount": 1500,
+        "spent_amount": 1500
+    },
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0a",
+        "category": "Transportation",
+        "allocated_amount": 300,
+        "spent_amount": 200
+    },
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0b",
+        "category": "Groceries",
+        "allocated_amount": 400,
+        "spent_amount": 300
+    },
+    {
+        "user_id": "64ef8f9bfa9b9b48a6df7c0b",
+        "category": "Entertainment",
+        "allocated_amount": 200,
+        "spent_amount": 100
+    }
+]

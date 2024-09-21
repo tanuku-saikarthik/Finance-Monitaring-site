@@ -7,6 +7,7 @@ import NavBar from "./scenes/navbar/index";
 import Dashboard from "./scenes/dashboard/index";
 import Register from "./scenes/register/Register";
 import Login from "./scenes/login/Login";
+import Add from "./scenes/Add/add";
 
 function App() {
   const theme = useMemo(() => createTheme(themeSettings), []);
@@ -23,6 +24,7 @@ function App() {
               <Route path="/" element={<Login />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/prediction" element={<div>Predictions page</div>} />
+              <Route path="/add" element={<Add />} />
             </Routes>
           </Box>
         </ThemeProvider>
